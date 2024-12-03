@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gaming Tournament Registration</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Protest+Revolution&display=swap');
+        body {
+            background-image: url('../img/bg3.webp'); /* Gaming-themed background: guns, loot crates, and skulls */
+            background-size: cover;
+            background-position: center;
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+            font-family: "Protest Revolution", sans-serif;
+        }
+        .container {
+            max-width: 650px;
+            margin: 50px auto;
+            padding: 35px;
+            background-color: rgba(255, 255, 255, 0.38); /* Semi-transparent for contrast */
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .logo img {
+            height: 90px;
+            margin-right: 10px;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: black;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+            color: black;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: none;
+            border-radius: 5px;
+            background-color: #2b2b3c;
+            color: #ffffff;
+        }
+        input[type="file"] {
+            background-color: #fff;
+            color: #000;
+        }
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin-top: 20px;
+            background-color: #4caf50;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 10px;
+        }
+        #socialIcons {
+            position: fixed;
+            top: 50px;
+            right: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            z-index: 1000;
+        }
+        #socialIcons a {
+            font-size: 30px; /* Increased size */
+            transition: transform 0.3s ease;
+        }
+        #socialIcons a i {
+            color: white;
+            transition: color 0.3s ease;
+        }
+        #socialIcons a:hover i {
+            transform: scale(1.2);
+        }
+        #socialIcons a.instagram i {
+            color: #e4405f; /* Instagram Pink */
+        }
+        #socialIcons a.whatsapp i {
+            color: #25d366; /* WhatsApp Green */
+        }
+        #socialIcons a.facebook i {
+            color: #1877f2; /* Facebook Blue */
+        }
+    </style>
+</head>
+<body>
+    <!-- Social Icons -->
+    <div id="socialIcons">
+        <a href="https://instagram.com/your-instagram-id" target="_blank" class="instagram" title="Follow us on Instagram">
+            <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://wa.me/your-whatsapp-number" target="_blank" class="whatsapp" title="Chat with us on WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="https://facebook.com" target="_blank" class="facebook" title="Visit our Facebook Page">
+            <i class="fab fa-facebook"></i>
+        </a>
+    </div>
+
+    <div class="container">
+        <!-- Logo -->
+        <div class="logo">
+            <img src="../img/DALL·E 2024-12-03 09.49.35 - A bold and dynamic gaming logo for a channel named 'NRR'. The initials 'NRR' are displayed in a futuristic, neon-gradient font (red, black, and gold) .webp" alt="NRR Logo"> <!-- Replace with your logo file path -->
+            <h1 id="h1"><b>NRR Tournament Registration</b></h1>
+        </div>
+
+        <form id="registrationForm" action="mailto:your-email@example.com" method="POST" enctype="multipart/form-data">
+            <!-- Team Details -->
+            <label for="teamName">Team Name</label>
+            <input type="text" id="teamName" name="teamName" placeholder="Enter your team name" required>
+
+            <label for="teamLogo">Team Logo</label>
+            <input type="file" id="teamLogo" name="teamLogo" accept="image/*" required>
+
+            <!-- Team Leader -->
+            <label for="teamLeader">Team IGL</label>
+            <input type="text" id="teamLeader" name="team IGL" placeholder="Enter team IGL's name" required>
+
+            <!-- Players -->
+            <label for="player1">P1 Name</label>
+            <input type="text" id="player1" name="p1" placeholder="Enter P1 name" required>
+
+            <label for="player2">P2 Name</label>
+            <input type="text" id="player2" name="p2" placeholder="Enter P2 name" required>
+
+            <label for="player3">P3 Name</label>
+            <input type="text" id="player3" name="p3" placeholder="Enter P3 name" required>
+
+            <!-- Substitute Players -->
+            <label for="substitute1">Substitute 1 Name</label>
+            <input type="text" id="substitute1" name="substitute1" placeholder="Enter Substitute 1 name" required>
+
+            <label for="substitute2">Substitute 2 Name</label>
+            <input type="text" id="substitute2" name="substitute2" placeholder="Enter Substitute 2 name" required>
+
+            <!-- Contact Details -->
+            <label for="email">Email ID</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email ID">
+
+            <label for="instaID">Instagram ID</label>
+            <input type="text" id="instaID" name="instaID" placeholder="Enter your Instagram ID" required>
+
+            <label for="whatsappNumber">WhatsApp Number</label>
+            <input type="tel" id="whatsappNumber" name="whatsappNumber" placeholder="Enter your WhatsApp number">
+
+            <!-- Submit Button -->
+            <button type="submit">Submit</button>
+        </form>
+        <div class="footer">
+            <p>Your data will be sent to us via email or Instagram.</p>
+        </div>
+    </div>
+</body>
+</html>
